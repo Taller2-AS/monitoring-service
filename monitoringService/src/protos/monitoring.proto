@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package monitoring;
+
+service MonitoringService {
+  rpc ListActions (Empty) returns (ActionListResponse);
+  rpc ListErrors (Empty) returns (ErrorListResponse);
+}
+
+message Empty {}
+
+message Action {
+  string id = 1;
+  string userId = 2;
+  string email = 3;
+  string method = 4;
+  string url = 5;
+  string action = 6;
+  string date = 7;
+}
+
+message Error {
+  string id = 1;
+  string userId = 2;
+  string email = 3;
+  string error = 4;
+  string date = 5;
+}
+
+message ActionListResponse {
+  repeated Action actions = 1;
+}
+
+message ErrorListResponse {
+  repeated Error errors = 1;
+}

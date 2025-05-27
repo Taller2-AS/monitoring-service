@@ -1,0 +1,21 @@
+{
+  "name": "monitoringservice",
+  "version": "1.0.0",
+  "description": "Microservicio de monitoreo para el proyecto StreamFlow - Arquitectura de Sistemas",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node src/database/seeders/seeder.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.13.4",
+    "@grpc/proto-loader": "^0.7.15",
+    "amqplib": "^0.10.8",
+    "dotenv": "^16.5.0",
+    "mongoose": "^8.15.1"
+  }
+}
